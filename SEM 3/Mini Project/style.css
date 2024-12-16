@@ -85,8 +85,3 @@ form button {
     color: #d5eb73;
     border-radius: 100px;
 }
-button:hover{
-    color: yellowgreen;
-    background-color: black;
-    padding: 15px 25px;
-}
