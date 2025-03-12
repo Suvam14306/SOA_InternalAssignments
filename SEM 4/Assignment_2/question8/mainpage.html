@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding: 10px;
+            border-radius: 5px;
+            background-color: teal;
+            color: yellow;
+            font-weight: bolder;
+        }
+        button:hover{
+            background-color: black;
+            color: yellow;
+            padding: 15px;
+        }
+        #progress{
+           width: 400px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <video src="vd2.mp4" width="545px" id="video"></video> <br>
+    <button id="play" onclick="document.getElementById('video').play()">Play</button> 
+    <button id="pause" onclick="document.getElementById('video').pause()">Pause</button>
+    <input type="range" id="progress" min="0" max="100" value="0">
+    <script>
+        const video = document.getElementById('video');
+        const progressBar = document.getElementById('progress');
+
+        video.addEventListener('timeupdate', () => {
+            const progress = (video.currentTime / video.duration) * 100;
+            progressBar.value = progress;
+        });
+
+        progressBar.addEventListener('input', () => {
+            video.currentTime = (progressBar.value / 100) * video.duration;
+        });
+    </script>
+
+</body>
+
+</html>

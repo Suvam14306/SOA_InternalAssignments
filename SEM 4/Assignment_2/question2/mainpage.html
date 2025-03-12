@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       button{
+        margin: 20px;
+        padding: 20px;
+        border-radius: 40%;
+        color: red;
+        background-color: burlywood;
+       }
+       button:hover{
+        background-color: navy;
+        color: yellow;
+       }
+    </style>
+</head>
+<body>
+ 
+    <div>
+       <audio src="vd2.mp4" id="audioPlayer"></audio>
+        <button onclick="document.getElementById('audioPlayer').play();">Play me</button>
+        <button onclick="document.getElementById('audioPlayer').pause();">Pause</button>
+        <button onclick="document.getElementById('audioPlayer').muted = !document.getElementById('audioPlayer').muted;">Mute</button>
+    </div>
+</body>
+</html>

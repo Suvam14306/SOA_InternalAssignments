@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page Design</title>
+    <style>
+
+        .container {       
+            max-width: 1200px;
+            margin: auto;
+        }
+        .section {
+            padding: 20px;
+            border: 2px solid navy;
+            margin: 5px;         
+        }
+        @media (min-width: 768px) {
+            .container {
+               display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Responsive Page Design</h1>
+</header>
+
+<div class="container">
+    <div class="section">
+        <h2> Responsive Web Design</h2>
+        <p>Responsive Web Design (RWD) ensures that web pages adjust dynamically to different screen sizes and devices. It helps improve user experience, SEO rankings, and mobile accessibility.</p>
+        <p>Benefits of RWD include:</p>
+        <ul>
+            <li>Better user experience</li>
+            <li>Increased mobile traffic</li>
+            <li>Faster website development</li>
+            <li>Improved SEO</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Learn More</h2>
+        <img src="pic1.jpg" height="200px" alt="Responsive Design Example">
+        <p>For more details, visit <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design" target="_blank">MDN Responsive Design</a>.</p>
+    </div>
+</div>
+
+<footer>
+    <p>Contact us at: info@example.com | Follow us on <a href="#">Social Media</a></p>
+</footer>
+
+</body>
+</html>
