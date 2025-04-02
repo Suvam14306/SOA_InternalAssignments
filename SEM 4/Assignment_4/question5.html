@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: navy;
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="soa.png" alt="soa" height="80px"> <br>
+    <h1>Registration Form</h1>
+    <h2>(All the fields are required to fill)</h2>
+    <form action="register" method="post" enctype="multipartform-data" id="registrationForm">
+        <label class="field" for="name">Name</label>
+        <input name="name" type="text" />
+        <br> <br>
+        <label class="field">Gender</label>
+        <label><input type="radio" name="gender" value="male" />
+            male</label>
+        <label><input type="radio" name="gender" value="female" /> female</label>
+        <br> <br>
+        <label class="field">Operating System</label>
+        <select id="os">
+            <option value="windows">windows</option>
+            <option value="linux">linux</option>
+            <option value="macos">Macos</option>
+        </select>
+        <br> <br>
+        <label class="field">email</label>
+        <input name="email" id="email" type="email" />
+        <br><br>
+        <label class="field" >password</label>
+            <input name="pass" id="pass" type="text" />
+            <br><br>
+        <label for=""> <input type="checkbox" id="check"> I agree to the terms and coditions</label>
+        <br><br>       
+            <button disabled>Submit</button>
+    </form>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#registrationForm').submit(function(event) {
+                if (!$(this.name).val()) {
+                    event.preventDefault();
+                    alert("You must enter a name.");
+                }
+                if (!$(this).find("input[name='gender']:checked").length) {
+                    event.preventDefault();
+                    alert("You must select your gender.");
+                }
+                if (!$(this.os).val()) {
+                    event.preventDefault();
+                    alert("You must select an operating system.");
+                    
+                }
+                if (!$(this.email).val()) {
+                    event.preventDefault();
+                    alert("You must enter an email.");
+                    
+                }
+                if (!$(this.pass).val()) {
+                    event.preventDefault();
+                    alert("You must enter a password.");
+                }               
+                    
+                       })
+                       $("#check").change(function() {
+                $("button").removeAttr('disabled')
+            });
+        })
+    </script>
+</body>
+
+</html>
